@@ -1,0 +1,21 @@
+[Unit]
+Description=H2O - the optimized HTTP/1, HTTP/2 server
+After=local-fs.target
+After=network.target
+After=nss-lookup.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/h2o -m master -c /usr/local/etc/h2o.conf
+ExecReload=/usr/bin/kill -HUP $MAINPID
+ExecStop=/usr/bin/kill -TERM $MAINPID
+
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=full
+ProtectHome=yes
+
+LimitNOFILE=infinity

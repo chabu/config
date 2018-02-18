@@ -1,0 +1,12 @@
+[Match]
+Name=eth0
+
+[Network]
+LLDP=no
+DHCP=yes
+MulticastDNS=no
+IPv6PrivacyExtensions=no
+
+[DHCP]
+UseHostname=no
+SendHostname=no

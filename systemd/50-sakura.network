@@ -1,0 +1,13 @@
+[Match]
+MACAddress=00:00:00:00:00:00
+
+[Network]
+DHCP=no
+LLDP=no
+MulticastDNS=no
+Gateway=192.0.2.1
+Address=192.0.2.0/24
+Gateway=fe80::1
+Address=2001:db8::1/64
+IPv6AcceptRA=no
+IPv6PrivacyExtensions=no

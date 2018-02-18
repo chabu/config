@@ -1,0 +1,6 @@
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT ! -s 2001:db8::/32 -i eth0 -p tcp -m tcp --dport 22 -j REJECT --reject-with tcp-reset
+COMMIT

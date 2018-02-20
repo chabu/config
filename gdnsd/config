@@ -1,0 +1,12 @@
+options = {
+  max_ttl = 604800
+  max_ncache_ttl = 3600
+  edns_client_subnet = true
+  zones_rfc1035_auto = false
+  http_listen = 127.0.0.1
+  any_mitigation = true
+}
+
+plugins = {
+  reflect = {}
+}

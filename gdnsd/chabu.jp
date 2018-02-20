@@ -1,0 +1,16 @@
+$TTL 1h
+
+@        1d       IN SOA      ns root ( 0 1h 10m 1w 1h )
+@        1d       IN NS       ns
+
+ns       1d       IN A        192.0.2.1
+ns       1d       IN AAAA     2001:db8::1
+
+www      1h       IN A        192.0.2.1
+www      1h       IN AAAA     2001:db8::1
+
+*.dev    1h       IN A        192.0.2.2
+*.rf     1m/1m    DYNA        reflect!both
+
+dummy1 IN CNAME verify.bing.com.
+dummy2 IN CNAME gv-xxxxxxxxxxxxxx.dv.googlehosted.com.

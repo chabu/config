@@ -13,9 +13,12 @@ ExecStart=/usr/local/bin/h2o -m master -c /usr/local/etc/h2o.conf
 ExecReload=/usr/bin/kill -HUP $MAINPID
 ExecStop=/usr/bin/kill -TERM $MAINPID
 
-PrivateTmp=yes
-PrivateDevices=yes
 ProtectSystem=full
 ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+
+MountFlags=slave
+DevicePolicy=closed
 
 LimitNOFILE=infinity

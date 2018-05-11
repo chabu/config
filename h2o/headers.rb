@@ -24,7 +24,7 @@ lambda do |env|
     'facebookexternalhit',
   ]
 
-  html = [200, {'content-type' => 'text/html; charset=utf-8'}, [<<'HTML']]
+  html = [403, {'content-type' => 'text/html; charset=utf-8'}, [<<'HTML']]
 <!DOCTYPE html>
 <html lang="en">
 <head>

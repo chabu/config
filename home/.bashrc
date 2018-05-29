@@ -16,7 +16,8 @@ alias arch-firewall='iptables -nvL --line-numbers'
 alias arch-firewall6='ip6tables -nvL --line-numbers'
 alias arch-nat='iptables -t nat -nvL --line-numbers'
 alias arch-tcp='ip tcp_metrics'
-alias arch-clean='pacman -Sc --noconfirm && pacman-optimize'
+alias arch-update='pacman -Syu'
+alias arch-clean='pacman -Sc --noconfirm'
 
 # for macOS
 alias mac-traceroute='traceroute -I -m32 -q1 -w1'

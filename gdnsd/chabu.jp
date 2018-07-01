@@ -2,6 +2,10 @@ $TTL 1h
 
 @        1d       IN SOA      ns root ( 0 1h 10m 1w 1h )
 @        1d       IN NS       ns
+@        1h       IN MX       0 .
+@        1h       IN TXT      "v=spf1 -all"
+@        1h       IN A        192.0.2.1
+@        1h       IN AAAA     2001:db8::1
 
 ns       1d       IN A        192.0.2.1
 ns       1d       IN AAAA     2001:db8::1

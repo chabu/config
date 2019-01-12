@@ -1,4 +1,4 @@
-pacman -S libev ragel liburcu libunwind
+pacman -S libev liburcu libsodium libunwind
 useradd -d / -M -r -s /usr/bin/nologin gdnsd
 autoreconf -vif
 ./configure --localstatedir=/var --with-rundir=/run

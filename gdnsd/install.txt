@@ -1,6 +1,5 @@
 pacman -S libev liburcu libsodium libunwind
 useradd -d / -M -r -s /usr/bin/nologin gdnsd
-autoreconf -vif
 ./configure --localstatedir=/var --with-rundir=/run
 make
 sudo make install

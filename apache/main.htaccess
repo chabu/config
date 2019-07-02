@@ -1,0 +1,7 @@
+Header always set Cache-Control "public, no-transform"
+Header always set Content-Security-Policy "default-src 'self'"
+Header always unset X-Robots-Tag
+
+<If "%{REQUEST_SCHEME} == 'http' || %{HTTP_HOST} != 'www.example.jp'">
+	RedirectPermanent "/" "https://www.example.jp/"
+</If>

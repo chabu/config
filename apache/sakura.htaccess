@@ -1,11 +1,10 @@
-DirectoryIndex index.html .ht
 AddCharset UTF-8 txt
 
-Header always set Cache-Control "max-age=3600, must-revalidate"
-Header always set Content-Security-Policy "default-src 'self'"
-Header always set Strict-Transport-Security "max-age=15724800"
+Header always set Cache-Control "max-age=28800, must-revalidate"
+Header always set Strict-Transport-Security "max-age=31536000"
+Header always set X-Content-Type-Options "nosniff"
 Header always set X-Frame-Options "SAMEORIGIN"
 
-<If "%{REQUEST_SCHEME} == 'http' || %{HTTP_HOST} != 'example.sakura.ne.jp'">
-	RedirectPermanent "/" "https://example.sakura.ne.jp/"
+<If "%{HTTP_HOST} != 'example.sakura.ne.jp'">
+	Header always append Cache-Control "private"
 </If>

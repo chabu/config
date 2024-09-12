@@ -7,4 +7,5 @@ Header always set X-Frame-Options "SAMEORIGIN"
 
 <If "%{HTTP_HOST} != 'example.sakura.ne.jp'">
 	Header always append Cache-Control "private"
+	Header always append X-Robots-Tag "noindex, nofollow"
 </If>
